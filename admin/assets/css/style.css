@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Header */
+
+.wrapper .header{
+    z-index: 1;
+    background: #0f2453;
+    position: fixed;
+    width: calc(100% - 0%);
+    height: 70px;
+    display: flex;
+    top: 0;
+}
+
+.wrapper .header .header-menu{
+    width: calc(100% - 0%);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.wrapper .header .header-menu .title{
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-right: 900px;
+}
+
+.wrapper .header .header-menu .sidebtn{
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 900;
+    transition: 0.1s;
+    transition-property: color;
+}
+
+.wrapper .header .header-menu .sidebtn:hover{
+    color: yellow;
+}
+
+.wrapper .header .header-menu ul{
+    display: flex;
+}
+
+.wrapper .header .header-menu ul li a{
+    color: #fff;
+    background: none;
+    display: block;
+    margin-top: 15px;
+    font-size: 22px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.2s;
+    transition-property: color;
+
+}
+
+.wrapper .header .header-menu ul li a:hover{
+    color: yellow;
+}
+
+/* SideBar */
+
+.wrapper .sidebar{
+    z-index: 1;
+    background: rgb(24, 72, 134);
+    position: fixed;
+    top: 70px;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.wrapper .sidebar .sidebar-menu{
+    overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .item{
+    width: 250px;
+    overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn{
+    display: block;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    padding: 25px 20px;
+    border-bottom: 1px solid rgb(26, 24, 24);
+    transition: 0.3s;
+    transition-property: color;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+    color: yellow;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn i{
+    text-align: center;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn span{
+    margin-left: 35px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+    float: right;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu{
+    background: rgb(75, 103, 182);
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s;
+    transition-property: background, max-height;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a{
+    display: block;
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 20px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+    background: rgb(124, 124, 30);
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:not(:last-child){
+    border-bottom: 1px solid #8FC5E9;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu i{
+    padding-right: 45px;
+    font-size: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu span{
+    margin-left: 35px;
+}
+
+.wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+    max-height: 500px;
+}
+
+.wrapper .main-container{
+    width: (100% - 250px);
+    margin-top: 70px;
+    margin-left: 250px;
+    height: 100%;
+    padding: 15px;
+    transition: 0.3s;
+    color: #fff;
+    overflow: auto;
+}
+
+#check:checked ~ .sidebar{
+    width: 70px;
+    transition: 0.2s;
+}
+
+#check:checked ~ a span{
+    display: none;
+    transition: 0.2s;
+}
+
+#check:checked ~ .sidebar .sidebar-menu .item .menu-btn{
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+#check:checked ~ .sidebar .sidebar-menu .item .sub-menu i{
+    font-size: 15px;
+    padding-left: 3px;
+    transition: 0.2s;
+}
+
+#check:checked ~ .main-container{
+    width: calc(100% - 250px);
+    margin-left: 140px;
+    transition: 0.2s;
+}
+  
